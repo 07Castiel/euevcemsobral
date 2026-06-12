@@ -4,6 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Sparkles, Mail, Camera, Star, Calendar, Plane, Home, Infinity as InfinityIcon } from "lucide-react";
 import heroImg from "@/assets/couple-hero.jpg";
 import coracaoAsset from "@/assets/coracao.jpg.asset.json";
+import t1 from "@/assets/timeline-1.jpg.asset.json";
+import t2 from "@/assets/timeline-2.jpg.asset.json";
+import t3 from "@/assets/timeline-3.jpg.asset.json";
+import t4 from "@/assets/timeline-4.jpg.asset.json";
+import t5v from "@/assets/timeline-5.mp4.asset.json";
+import t6 from "@/assets/timeline-6.jpg.asset.json";
+import t7 from "@/assets/timeline-7.jpg.asset.json";
+import t8 from "@/assets/timeline-8.jpg.asset.json";
+import t9 from "@/assets/timeline-9.jpg.asset.json";
+import t10 from "@/assets/timeline-10.jpg.asset.json";
 const coracaoImg = coracaoAsset.url;
 
 export const Route = createFileRoute("/")({
