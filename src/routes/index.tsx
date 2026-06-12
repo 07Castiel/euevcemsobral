@@ -34,23 +34,23 @@ export const Route = createFileRoute("/")({
 const COUPLE = { he: "Leonardo Gabriel", she: "Maria Greiciane" };
 const START_DATE = new Date("2024-10-21T00:00:00");
 
-const TIMELINE: Array<{ date: string; title: string; text: string; img: string; video?: string }> = [
+const TIMELINE: Array<{ date: string; title: string; text: string; img: string; video?: string; fit?: "contain" }> = [
   { date: "21 / 10 / 2024", title: "O dia em que nos conhecemos", text: "Onde tudo começou. Um simples encontro que mudaria o rumo da minha história.", img: t1.url },
   { date: "24 / 10 / 2024", title: "Nosso primeiro beijo", text: "O momento em que percebi que algo extraordinário estava nascendo entre nós.", img: t2.url },
   { date: "10 / 11 / 2024", title: "Nosso primeiro fim de semana na minha casa", text: "O começo da sensação de lar quando você está por perto.", img: t3.url },
-  { date: "29 / 11 / 2024", title: "Nossas videochamadas", text: "A distância encurtava cada vez que sua imagem aparecia na tela.", img: t4.url },
+  { date: "29 / 11 / 2024", title: "Nossas videochamadas", text: "A distância encurtava cada vez que sua imagem aparecia na tela.", img: t4.url, fit: "contain" },
   { date: "24 / 12 / 2024", title: "O início do nosso amor", text: "Na véspera de Natal, ganhei o melhor presente: você, oficialmente comigo.", img: heroImg, video: t5v.url },
   { date: "29 / 12 / 2024", title: "Nossa primeira viagem de ônibus juntos", text: "Mãos dadas, paisagem passando, e a certeza de que qualquer caminho com você vale a pena.", img: t6.url },
   { date: "29 / 12 / 2024", title: "Momentos difíceis", text: "Até nos dias pesados, escolhi e escolho ficar. É amor mesmo nas tempestades.", img: t7.url },
   { date: "31 / 12 / 2024", title: "Nosso primeiro show juntos", text: "A música tocando, mas a melhor melodia era o seu sorriso ao meu lado.", img: t8.url },
   { date: "01 / 01 / 2025", title: "Nosso primeiro Réveillon juntos", text: "Virando o ano nos seus braços — meu único pedido foi mais tempo com você.", img: t9.url },
-  { date: "24 / 04 / 2025", title: "Acompanhando você no hospital", text: "Eu te disse com presença o que palavras não cabem: estou aqui, sempre.", img: t10.url },
-  { date: "26 / 04 / 2025", title: "Nossas sinucadas por aí", text: "Tacos, risadas e disputas bobas que viraram lembranças preciosas.", img: t11.url },
+  { date: "24 / 04 / 2025", title: "Acompanhando você no hospital", text: "Eu te disse com presença o que palavras não cabem: estou aqui, sempre.", img: t10.url, fit: "contain" },
+  { date: "26 / 04 / 2025", title: "Nossas sinucadas por aí", text: "Tacos, risadas e disputas bobas que viraram lembranças preciosas.", img: t11.url, fit: "contain" },
   { date: "27 / 04 / 2025", title: "Nosso primeiro café da manhã na nossa casa", text: "Um gole simples, um momento enorme. O começo de tantas manhãs nossas.", img: t12.url },
   { date: "01 / 05 / 2025", title: "Apoiando você nos seus momentos importantes", text: "Sua vitória é minha festa. Te ver brilhar é o que me move.", img: heroImg, video: t13v.url },
-  { date: "05 / 05 / 2025", title: "Caindo e fazendo graça", text: "A gente cai, ri, levanta. Junto, até tropeço vira história engraçada.", img: t14.url },
-  { date: "20 / 06 / 2025", title: "Festejos de Pacujá", text: "Luzes, música e a sua mão na minha — um pedaço da nossa história em festa.", img: t15.url },
-  { date: "27 / 06 / 2025", title: "Jiu-jitsu", text: "Aprendendo, suando e descobrindo mais uma paixão que cabe entre nós dois.", img: t16.url },
+  { date: "05 / 05 / 2025", title: "Caindo e fazendo graça", text: "A gente cai, ri, levanta. Junto, até tropeço vira história engraçada.", img: t14.url, fit: "contain" },
+  { date: "20 / 06 / 2025", title: "Festejos de Pacujá", text: "Luzes, música e a sua mão na minha — um pedaço da nossa história em festa.", img: t15.url, fit: "contain" },
+  { date: "27 / 06 / 2025", title: "Jiu-jitsu", text: "Aprendendo, suando e descobrindo mais uma paixão que cabe entre nós dois.", img: t16.url, fit: "contain" },
   { date: "03 / 07 / 2025", title: "A gente se amando", text: "Sem data especial, sem motivo grande — só nós, e isso já é tudo.", img: t17.url },
   { date: "06 / 07 / 2025", title: "Jiu-jitsu juntos em casa", text: "Treino, risadas e abraços que sempre terminam a luta com beijo.", img: t18.url },
   { date: "22 / 07 / 2025", title: "Nossas fugas clandestinas kkk", text: "Aqueles encontros escondidos que ficaram entre os mais doces que vivemos.", img: t19.url },
@@ -58,6 +58,7 @@ const TIMELINE: Array<{ date: string; title: string; text: string; img: string; 
   { date: "29 / 11 / 2025", title: "Você me apoiando nas minhas conquistas", text: "Seu colo é minha base. Cada passo que dou tem um pedacinho seu.", img: heroImg },
   { date: "27 / 12 / 2025", title: "Dinâmica de amigos", text: "Rindo até doer a barriga, cercados de gente boa — e você, a melhor parte.", img: heroImg },
 ];
+
 
 const POEMS = [
   { title: "Para você", body: "Se o tempo me perguntasse\nonde eu quero estar,\neu diria: nos seus olhos,\nno seu colo, no seu mar.\n\nSe a vida me oferecesse\ntodos os mundos pra escolher,\neu escolheria todos eles\nse fossem feitos de você." },
@@ -271,6 +272,8 @@ function Timeline() {
                     playsInline
                     controls
                   />
+                ) : e.fit === "contain" ? (
+                  <img src={e.img} alt={e.title} className="w-full max-h-[32rem] object-contain bg-black/30" loading="lazy" />
                 ) : (
                   <img src={e.img} alt={e.title} className="w-full h-56 object-cover" loading="lazy" />
                 )}
