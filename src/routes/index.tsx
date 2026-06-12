@@ -14,6 +14,16 @@ import t7 from "@/assets/timeline-7.jpg.asset.json";
 import t8 from "@/assets/timeline-8.jpg.asset.json";
 import t9 from "@/assets/timeline-9.jpg.asset.json";
 import t10 from "@/assets/timeline-10.jpg.asset.json";
+import t11 from "@/assets/timeline-11.jpg.asset.json";
+import t12 from "@/assets/timeline-12.jpg.asset.json";
+import t13v from "@/assets/timeline-13.mp4.asset.json";
+import t14 from "@/assets/timeline-14.jpg.asset.json";
+import t15 from "@/assets/timeline-15.jpg.asset.json";
+import t16 from "@/assets/timeline-16.jpg.asset.json";
+import t17 from "@/assets/timeline-17.jpg.asset.json";
+import t18 from "@/assets/timeline-18.jpg.asset.json";
+import t19 from "@/assets/timeline-19.jpg.asset.json";
+import t20 from "@/assets/timeline-20.jpg.asset.json";
 const coracaoImg = coracaoAsset.url;
 
 export const Route = createFileRoute("/")({
@@ -35,16 +45,16 @@ const TIMELINE: Array<{ date: string; title: string; text: string; img: string; 
   { date: "31 / 12 / 2024", title: "Nosso primeiro show juntos", text: "A música tocando, mas a melhor melodia era o seu sorriso ao meu lado.", img: t8.url },
   { date: "01 / 01 / 2025", title: "Nosso primeiro Réveillon juntos", text: "Virando o ano nos seus braços — meu único pedido foi mais tempo com você.", img: t9.url },
   { date: "24 / 04 / 2025", title: "Acompanhando você no hospital", text: "Eu te disse com presença o que palavras não cabem: estou aqui, sempre.", img: t10.url },
-  { date: "26 / 04 / 2025", title: "Nossas sinucadas por aí", text: "Tacos, risadas e disputas bobas que viraram lembranças preciosas.", img: heroImg },
-  { date: "27 / 04 / 2025", title: "Nosso primeiro café da manhã na nossa casa", text: "Um gole simples, um momento enorme. O começo de tantas manhãs nossas.", img: heroImg },
-  { date: "01 / 05 / 2025", title: "Apoiando você nos seus momentos importantes", text: "Sua vitória é minha festa. Te ver brilhar é o que me move.", img: heroImg },
-  { date: "05 / 05 / 2025", title: "Caindo e fazendo graça", text: "A gente cai, ri, levanta. Junto, até tropeço vira história engraçada.", img: heroImg },
-  { date: "20 / 06 / 2025", title: "Festejos de Pacujá", text: "Luzes, música e a sua mão na minha — um pedaço da nossa história em festa.", img: heroImg },
-  { date: "27 / 06 / 2025", title: "Jiu-jitsu", text: "Aprendendo, suando e descobrindo mais uma paixão que cabe entre nós dois.", img: heroImg },
-  { date: "03 / 07 / 2025", title: "A gente se amando", text: "Sem data especial, sem motivo grande — só nós, e isso já é tudo.", img: heroImg },
-  { date: "06 / 07 / 2025", title: "Jiu-jitsu juntos em casa", text: "Treino, risadas e abraços que sempre terminam a luta com beijo.", img: heroImg },
-  { date: "22 / 07 / 2025", title: "Nossas fugas clandestinas kkk", text: "Aqueles encontros escondidos que ficaram entre os mais doces que vivemos.", img: heroImg },
-  { date: "22 / 08 / 2025", title: "Seu aniversário de 20 anos", text: "Celebrar você é celebrar o melhor presente que a vida me deu.", img: heroImg },
+  { date: "26 / 04 / 2025", title: "Nossas sinucadas por aí", text: "Tacos, risadas e disputas bobas que viraram lembranças preciosas.", img: t11.url },
+  { date: "27 / 04 / 2025", title: "Nosso primeiro café da manhã na nossa casa", text: "Um gole simples, um momento enorme. O começo de tantas manhãs nossas.", img: t12.url },
+  { date: "01 / 05 / 2025", title: "Apoiando você nos seus momentos importantes", text: "Sua vitória é minha festa. Te ver brilhar é o que me move.", img: heroImg, video: t13v.url },
+  { date: "05 / 05 / 2025", title: "Caindo e fazendo graça", text: "A gente cai, ri, levanta. Junto, até tropeço vira história engraçada.", img: t14.url },
+  { date: "20 / 06 / 2025", title: "Festejos de Pacujá", text: "Luzes, música e a sua mão na minha — um pedaço da nossa história em festa.", img: t15.url },
+  { date: "27 / 06 / 2025", title: "Jiu-jitsu", text: "Aprendendo, suando e descobrindo mais uma paixão que cabe entre nós dois.", img: t16.url },
+  { date: "03 / 07 / 2025", title: "A gente se amando", text: "Sem data especial, sem motivo grande — só nós, e isso já é tudo.", img: t17.url },
+  { date: "06 / 07 / 2025", title: "Jiu-jitsu juntos em casa", text: "Treino, risadas e abraços que sempre terminam a luta com beijo.", img: t18.url },
+  { date: "22 / 07 / 2025", title: "Nossas fugas clandestinas kkk", text: "Aqueles encontros escondidos que ficaram entre os mais doces que vivemos.", img: t19.url },
+  { date: "22 / 08 / 2025", title: "Seu aniversário de 20 anos", text: "Celebrar você é celebrar o melhor presente que a vida me deu.", img: t20.url },
   { date: "29 / 11 / 2025", title: "Você me apoiando nas minhas conquistas", text: "Seu colo é minha base. Cada passo que dou tem um pedacinho seu.", img: heroImg },
   { date: "27 / 12 / 2025", title: "Dinâmica de amigos", text: "Rindo até doer a barriga, cercados de gente boa — e você, a melhor parte.", img: heroImg },
 ];
