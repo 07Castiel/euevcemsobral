@@ -149,7 +149,7 @@ function Opening({ onStart }: { onStart: () => void }) {
         transition={{ duration: 1.4, ease: "easeOut" }}
         className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden glass mb-8 shadow-2xl"
       >
-        <img src={heroImg} alt="Nós dois" className="w-full h-full object-cover" />
+        <img src={coracaoImg} alt="Nós dois" className="w-full h-full object-cover" />
         <div className="absolute inset-0 ring-1 ring-white/20 rounded-full" />
       </motion.div>
       <motion.h1
