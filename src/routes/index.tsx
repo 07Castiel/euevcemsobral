@@ -14,10 +14,10 @@ export const Route = createFileRoute("/")({
 const COUPLE = { he: "Leonardo Gabriel", she: "Maria Greiciane" };
 const START_DATE = new Date("2024-10-21T00:00:00");
 
-const TIMELINE = [
+const TIMELINE: Array<{ date: string; title: string; text: string; img: string; video?: string }> = [
   { date: "21 / 10 / 2024", title: "O dia em que nos conhecemos", text: "Onde tudo começou. Um simples encontro que mudaria o rumo da minha história." , img: heroImg },
   { date: "24 / 10 / 2024", title: "Nosso primeiro beijo", text: "O momento em que percebi que algo extraordinário estava nascendo entre nós.", img: heroImg },
-  { date: "24 / 12 / 2024", title: "O início do nosso amor", text: "Na véspera de Natal, ganhei o melhor presente: você, oficialmente comigo.", img: heroImg },
+  { date: "24 / 12 / 2024", title: "O início do nosso amor", text: "Na véspera de Natal, ganhei o melhor presente: você, oficialmente comigo.", img: heroImg, video: "" },
   { date: "12 / 06 / 2026", title: "O pedido oficial", text: "Hoje, diante de tudo que vivemos, eu te peço para sermos oficialmente um.", img: heroImg },
 ];
 
@@ -223,7 +223,19 @@ function Timeline() {
             <div className="absolute left-4 sm:left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-[var(--rose)] ring-4 ring-background shadow-[0_0_20px_var(--rose)]" />
             <div className="pl-12 sm:pl-0 sm:w-1/2">
               <div className="glass rounded-2xl overflow-hidden">
-                <img src={e.img} alt={e.title} className="w-full h-56 object-cover" loading="lazy" />
+                {e.video ? (
+                  <video
+                    src={e.video}
+                    className="w-full h-56 object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                  />
+                ) : (
+                  <img src={e.img} alt={e.title} className="w-full h-56 object-cover" loading="lazy" />
+                )}
               </div>
             </div>
             <div className="pl-12 sm:pl-0 sm:w-1/2">
