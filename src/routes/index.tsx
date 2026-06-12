@@ -223,7 +223,19 @@ function Timeline() {
             <div className="absolute left-4 sm:left-1/2 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-[var(--rose)] ring-4 ring-background shadow-[0_0_20px_var(--rose)]" />
             <div className="pl-12 sm:pl-0 sm:w-1/2">
               <div className="glass rounded-2xl overflow-hidden">
-                <img src={e.img} alt={e.title} className="w-full h-56 object-cover" loading="lazy" />
+                {e.video ? (
+                  <video
+                    src={e.video}
+                    className="w-full h-56 object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                  />
+                ) : (
+                  <img src={e.img} alt={e.title} className="w-full h-56 object-cover" loading="lazy" />
+                )}
               </div>
             </div>
             <div className="pl-12 sm:pl-0 sm:w-1/2">
