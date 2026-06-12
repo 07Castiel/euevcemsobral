@@ -3,6 +3,8 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Sparkles, Mail, Camera, Star, Calendar, Plane, Home, Infinity as InfinityIcon } from "lucide-react";
 import heroImg from "@/assets/couple-hero.jpg";
+import coracaoAsset from "@/assets/coracao.jpg.asset.json";
+const coracaoImg = coracaoAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -59,11 +61,14 @@ const WALL = [
 ];
 
 // Placeholders para galeria — facilmente substituíveis
-const GALLERY = Array.from({ length: 40 }, (_, i) => ({
-  src: heroImg,
-  caption: `Memória ${i + 1}`,
-  date: "",
-}));
+const GALLERY = [
+  { src: coracaoImg, caption: "Nosso coração", date: "" },
+  ...Array.from({ length: 39 }, (_, i) => ({
+    src: heroImg,
+    caption: `Memória ${i + 2}`,
+    date: "",
+  })),
+];
 
 const LETTER = `Minha Maria,
 
